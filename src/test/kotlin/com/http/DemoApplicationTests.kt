@@ -1,5 +1,7 @@
 package com.http
 
+
+import org.junit.Rule
 import org.junit.jupiter.api.Test
 import org.springframework.boot.test.context.SpringBootTest
 
@@ -9,5 +11,4 @@ class DemoApplicationTests {
 	@Test
 	fun contextLoads() {
 	}
-
 }
