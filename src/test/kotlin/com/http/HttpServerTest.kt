@@ -20,12 +20,12 @@ class HttpServerTest {
         server = SimpleHttpServer()
         server.start(PORT)
         client = HttpClient.newHttpClient()
-        client  = HttpClient.newBuilder().build();
+        client  = HttpClient.newBuilder().build()
     }
 
     @AfterEach
     fun tearDown() {
-      server.stop(0);
+      server.stop(0)
     }
 
     @Test
@@ -36,10 +36,10 @@ class HttpServerTest {
             .GET()
             .build()
 
-       val response = client.send(request, HttpResponse.BodyHandlers.ofString());
+       val response = client.send(request, HttpResponse.BodyHandlers.ofString())
         println(response.body())
 
-          println("Response Code: " + response.statusCode());
-          println("Response Body: " + response.body());
+          println("Response Code: " + response.statusCode())
+          println("Response Body: " + response.body())
     }
 }

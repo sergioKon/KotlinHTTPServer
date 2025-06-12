@@ -7,7 +7,7 @@ import java.net.http.HttpResponse
 
 
     fun main(args: Array<String>) {
-        val client = HttpClient.newBuilder().build();
+        val client = HttpClient.newBuilder().build()
 
         val request = HttpRequest.newBuilder()
             .uri(URI.create("http://localhost:8080/hello"))
@@ -15,9 +15,9 @@ import java.net.http.HttpResponse
             //    .timeout(Duration.ofMillis(10*1000))
             .build();
 
-        val response = client.send(request, HttpResponse.BodyHandlers.ofString());
+        val response = client.send(request, HttpResponse.BodyHandlers.ofString())
         println(response.body())
 
-        println("Response Code: " + response.statusCode());
-        println("Response Body: " + response.body());
+        println("Response Code: " + response.statusCode())
+        println("Response Body: " + response.body())
     }

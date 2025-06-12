@@ -29,11 +29,6 @@ class HelloHandlerMockKTest {
         assert(outputStream.toString() == "Hello, Kotlin!")
         verify { exchange.sendResponseHeaders(200, "Hello, Kotlin!".toByteArray().size.toLong()) }
     }
-    @Test
-    fun response(){
-        val exchange = mockk<HttpExchange>(relaxed = true)
-        val outputStream = ByteArrayOutputStream()
-    }
 }
 
 class CustomHttpExchange : HttpExchange() {
